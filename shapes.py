@@ -1,11 +1,15 @@
 from turtle import *
 
-def triangle(side_len, color_name):
-    color(color_name)
+def triangle(size,triangle_color):
+    # draws a triangle of any size and color
+
+    color(triangle_color)
     begin_fill()
+    right(60)
     for i in range(3):
-        left(120)
-        forward(side_len)
+        forward(size)
+        right(120)
+    left(60)
     end_fill()
 
 
