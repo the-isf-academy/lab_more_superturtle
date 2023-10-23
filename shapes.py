@@ -23,9 +23,9 @@ def rectangle(width, height, color_name):
         left(90)
     end_fill()
 
-def filled_circle(circle_size,circle_color):
-    pencolor(circle_color)
-    fillcolor(circle_color)
+def filled_circle(circle_size, rgb_color):
+    pencolor(rgb_color)
+    fillcolor(rgb_color)
     begin_fill()
     circle(circle_size)
     end_fill()
