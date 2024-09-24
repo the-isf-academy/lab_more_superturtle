@@ -5,11 +5,11 @@ def triangle(size,triangle_color):
 
     color(triangle_color)
     begin_fill()
-    right(60)
+   
     for i in range(3):
         forward(size)
-        right(120)
-    left(60)
+        left(120)
+    # left(60)
     end_fill()
 
 

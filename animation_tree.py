@@ -1,25 +1,29 @@
 from turtle import *
-from superturtle.animation import *
-from superturtle.movement import *
+from superturtle.animation import animate
+from superturtle.movement import fly
 from shapes import *
 from tree_parts import *
+from random import randint
+import settings
 
 # change turtle color mode to rgb
 colormode(255)
 
 
-for frame in animate(frames=120, loop=True):
+for frame in animate(frames=settings.TOTAL_FRAMES, loop=True):
     # animate tree growth 
-    height = frame.interpolate(start=30, stop=90, mirror=True)
-    branch_size = 100
+    tree_height = frame.interpolate(start=30, stop=60, mirror=True)
+    tree_width = 50
+
     
-    tree_trunk(branch_size/3,height)
-    update_position(20,height+(branch_size*.75))
-    tree_top(branch_size)
+    # draws the tree 
+    tree_full(tree_width, tree_height, settings.TREE_TRUNK_COLOR, settings.TREE_TOP_COLOR)
+
 
     # change background color 
     red_bgval = int(frame.interpolate(start=170, stop=250, mirror=True))
     bgcolor(red_bgval, 180, 250)
+
 
 
 
